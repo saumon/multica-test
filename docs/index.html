@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>multica-test — a sandbox for the Multica platform</title>
+  <meta name="description" content="A sandbox repository for testing the Multica platform: agents, issues, repositories and pull requests.">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      var theme = localStorage.getItem("theme");
+      if (theme) document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">multica-test</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#get-started">Get started</a>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="badge">Sandbox</span>
+      <h1>A playground for <span class="accent">Multica</span> agents</h1>
+      <p class="lead">
+        This repository exists solely to test the
+        <a href="https://github.com/multica-ai/multica">Multica</a> platform.
+        It contains no production code — every change here is an experiment driven by a Multica issue.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/saumon/multica-test">View on GitHub</a>
+        <a class="button" href="https://github.com/multica-ai/multica">Discover Multica</a>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>What this sandbox lets you verify</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Agents</h3>
+          <p>An agent picks up an issue and acts on it autonomously.</p>
+        </article>
+        <article class="card">
+          <h3>Issues</h3>
+          <p>Status transitions, comments and wakeups on the Multica board.</p>
+        </article>
+        <article class="card">
+          <h3>Repositories</h3>
+          <p>Checkout of a GitHub repository on a dedicated branch.</p>
+        </article>
+        <article class="card">
+          <h3>Pull requests</h3>
+          <p>Branch push, PR creation and linking back to the issue.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section">
+      <h2>How it is used</h2>
+      <ol class="steps">
+        <li><strong>Multica issue</strong><span>A change is described on the board.</span></li>
+        <li><strong>Agent</strong><span>The issue is assigned to a coding agent.</span></li>
+        <li><strong>Changes</strong><span>The agent checks out the repo on a dedicated branch.</span></li>
+        <li><strong>Pull request</strong><span>The branch is pushed and a PR is opened.</span></li>
+        <li><strong>Merge</strong><span>A human reviews and merges into <code>main</code>.</span></li>
+      </ol>
+    </section>
+
+    <section id="get-started" class="section">
+      <h2>Get started</h2>
+      <p>Clone the repository — there is nothing to build, install or run.</p>
+      <div class="code">
+        <pre><code id="clone-command">git clone https://github.com/saumon/multica-test.git</code></pre>
+        <button id="copy-button" class="button small" type="button" data-copy-target="clone-command">Copy</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      © <span id="year">2026</span> multica-test ·
+      <a href="https://github.com/saumon/multica-test">Source on GitHub</a> ·
+      Powered by <a href="https://github.com/multica-ai/multica">Multica</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
