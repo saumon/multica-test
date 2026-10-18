@@ -4,6 +4,9 @@
 
 **A sandbox repository for testing the [Multica](https://github.com/multica-ai/multica) platform.**
 
+**[🌐 Visit the landing page](https://saumon.github.io/multica-test/)**
+
+[![Landing page](https://img.shields.io/badge/landing%20page-online-6f42c1)](https://saumon.github.io/multica-test/)
 [![Powered by Multica](https://img.shields.io/badge/powered%20by-Multica-6f42c1)](https://github.com/multica-ai/multica)
 [![Status: sandbox](https://img.shields.io/badge/status-sandbox-orange)](#about)
 [![Last commit](https://img.shields.io/github/last-commit/saumon/multica-test)](https://github.com/saumon/multica-test/commits/main)
@@ -20,6 +23,7 @@
 
 - [About](#about)
 - [How it is used](#how-it-is-used)
+- [Landing page](#landing-page)
 - [Repository structure](#repository-structure)
 - [Getting started](#getting-started)
 - [Contributing](#contributing)
@@ -53,11 +57,30 @@ What this sandbox lets you verify:
 - **Repositories** — checkout of a GitHub repository on a dedicated branch.
 - **Pull requests** — branch push, PR creation and linking back to the issue.
 
+## Landing page
+
+A static landing page (HTML, CSS and vanilla JavaScript, no build step) lives in [`docs/`](docs/) and is published with GitHub Pages at **<https://saumon.github.io/multica-test/>**.
+
+To preview it locally:
+
+```bash
+python3 -m http.server --directory docs 8000
+# then open http://localhost:8000
+```
+
+> [!TIP]
+> GitHub Pages must be enabled once in **Settings → Pages** with *Source: Deploy from a branch*, branch `main`, folder `/docs`.
+
 ## Repository structure
 
 ```text
 .
-└── README.md   # This file
+├── docs/            # Landing page published with GitHub Pages
+│   ├── .nojekyll    # Serve files as-is (no Jekyll processing)
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+└── README.md        # This file
 ```
 
 ## Getting started
@@ -69,7 +92,7 @@ git clone https://github.com/saumon/multica-test.git
 cd multica-test
 ```
 
-There is nothing to build, install or run.
+There is nothing to build or install.
 
 ## Contributing
 
